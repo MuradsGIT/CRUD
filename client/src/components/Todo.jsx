@@ -13,18 +13,19 @@ const Todo = () => {
   const [todo, setTodo] = useState("");
   const [amountDone, setAmountDone] = useState(0);
   const [amount, setAmount] = useState(0);
+  const [link, setLink] = useState("https://todoapi-eta.vercel.app")
   const handleStatus = (e) => {
     console.log(e);
     if (e.status) {
       axios
-        .put("http://localhost:3001/handleStatus/" + e._id, { status: false })
+        .put(`${link}/handleStatus/` + e._id, { status: false })
         .then((res) => {
           console.log(res);
         })
         .catch((err) => console.log(err));
     } else {
       axios
-        .put("http://localhost:3001/handleStatus/" + e._id, { status: true })
+        .put(`${link}/handleStatus/` + e._id, { status: true })
         .then((res) => {
           console.log(res);
         })
@@ -36,7 +37,7 @@ const Todo = () => {
     e.preventDefault();
     setTodo("");
     if (todo.length >= 1) {
-      axios.post("http://localhost:3001/createTodo", {
+      axios.post(`${link}/createTodo`, {
         todo: todo,
         status: false,
       });
@@ -44,7 +45,7 @@ const Todo = () => {
   };
   const deleteTodo = (id) => {
     axios
-      .delete(`http://localhost:3001/deleteTodo/${id}`)
+      .delete(`${link}/deleteTodo/${id}`)
       .then(() => {
         return null;
       })
@@ -53,7 +54,7 @@ const Todo = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/")
+      .get(`${link}/`)
       .then((res) => {
         setTodos(res.data);
         // Count the number of completed todos

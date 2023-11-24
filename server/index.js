@@ -4,7 +4,9 @@ const mongoose = require('mongoose')
 const cors = require('cors') 
   const TodoModel = require('./models/TodoModel')
 const app = express(); 
-app.use(cors()); 
+app.use(cors(
+    
+)); 
 app.use(express.json()); 
   
 mongoose.connect("mongodb+srv://murad:murad123@cluster0.shxziqo.mongodb.net/crud"); 
