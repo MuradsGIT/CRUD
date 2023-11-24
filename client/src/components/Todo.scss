@@ -1,0 +1,198 @@
+
+.todo-container {
+    max-width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+/* Todo info / heading*/
+.todo-info {
+    border: 1px solid #dfceb1;
+    display: flex;
+    align-items: center;
+    padding: 50px 80px;
+    border-radius: 30px;
+    .todo-info-bubble {
+        padding: 33px 30px;
+        border-radius: 50%;
+        background-color: #ff5631;
+        margin-left: 50px;
+        height: 100px;
+        width: 100px;
+        p {
+            font-size: 26px;
+            color: #0d0d0d;
+            font-weight: bold;
+        }
+    }
+    .todo-info-text {
+        p {
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        }
+    }
+}
+
+/*Input and add */
+.create-todo {
+    padding: 50px 80px;
+    display: flex;
+    input {
+        width: 300px;
+        padding: 5px;
+        background-color: #1e1e1e;
+        color: #777777;
+        border-radius: 10px;
+        border-bottom: none;
+        border-right: none;
+        transition: 0.5s;
+    }
+    button {
+        background-color: #ff5631;
+        color: #0d0d0d;
+        font-weight: bold;
+        border: none;
+        font-size: 31px;
+        height: 50px;
+        padding-bottom: 5px;
+        margin-left: 30px;
+        width: 50px;
+        border-radius: 50%;
+        &:hover {
+            cursor: pointer;
+            background-color: #e66c50;
+        }
+        &:active {
+            box-shadow: 0 0 2px darkslategray;
+            transform: translateY(2px);
+        }
+    }
+}
+/*todos */
+
+.todo {
+    display: flex;
+    align-items: center;
+    border: 1px solid #dfceb140;
+    justify-content: space-between;
+    padding: 20px 35px;
+    background-color: #1e1e1e;
+    margin: 10px 0;
+    height: auto;
+    width: 700px;
+    border-radius: 10px;
+    .action {
+        display: flex;
+        align-items: center;
+        .true {
+            background-color: #57cb4c;
+            border: none;
+            height: 35px;
+            padding-bottom: 5px;
+            margin-right: 20px;
+            width: 35px;
+            border-radius: 50%;
+        }
+        .false {
+            background-color: #1e1e1e;
+
+            border: 1px solid #ff5631;
+            height: 35px;
+            padding-bottom: 5px;
+            margin-right: 20px;
+            width: 35px;
+            border-radius: 50%;
+        }
+    }
+    .todo-actions {
+        display: flex;
+        align-items: center;
+        h1 {
+            color: #dfceb1;
+            cursor: pointer;
+        }
+    }
+    p {
+        max-width: 500px;
+        line-break: anywhere;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .todo-container{
+        width: 100%;
+    }
+
+    .todo-info{
+        margin: auto;
+        margin-left: 60px;
+    }
+    /*Input and add */
+    .create-todo {
+        padding: 50px 80px;
+        display: flex;
+        margin: auto;
+       
+        
+    }
+    input{
+        font-size: 23px;
+    }
+
+    /*todos */
+    .todo-list {
+        margin: auto;
+        width: 100%;
+    }
+    .todo {
+        display: flex;
+        align-items: center;
+        border: 1px solid #dfceb140;
+        justify-content: space-between;
+        padding: 20px 10px;
+        background-color: #1e1e1e;
+        margin: 10px 0;
+        height: auto;
+        width: 500px;
+        font-size: 23px;
+        border-radius: 10px;
+        .action {
+            display: flex;
+            align-items: center;
+            .true {
+                background-color: #57cb4c;
+                border: none;
+                height: 35px;
+                padding-bottom: 5px;
+                margin-right: 10px;
+                width: 35px;
+                border-radius: 50%;
+            }
+            .false {
+                background-color: #1e1e1e;
+
+                border: 1px solid #ff5631;
+                height: 35px;
+                padding-bottom: 5px;
+                margin-right: 10px;
+                width: 35px;
+                border-radius: 50%;
+            }
+        }
+        .todo-actions {
+            display: flex;
+            align-items: center;
+            
+            h1 {
+                color: #dfceb1;
+                cursor: pointer;
+            }
+        }
+        p {
+            max-width: 330px;
+            line-break: anywhere;
+        }
+    }
+}
+
