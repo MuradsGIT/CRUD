@@ -13,7 +13,7 @@ const Todo = () => {
   const [todo, setTodo] = useState("");
   const [amountDone, setAmountDone] = useState(0);
   const [amount, setAmount] = useState(0);
-  const [link, setLink] = useState("https://todoapi-eta.vercel.app")
+  const [link, setLink] = useState("http://localhost:3001")
   const handleStatus = (e) => {
     console.log(e);
     if (e.status) {

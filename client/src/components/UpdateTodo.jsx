@@ -11,12 +11,12 @@ const UpdateTodo = () => {
   const [chosenTodo, setChosenTodo] = useState("");
   const navigate = useNavigate();
 
-  const [link, setLink] = useState("https://todoapi-eta.vercel.app")
+  const [link, setLink] = useState("http://localhost:3001")
 
   const editTodo = (e) => {
     e.preventDefault();
     axios
-      .put(`${link}}/editTodo/` + id, {chosenTodo} )
+      .put(`${link}/editTodo/` + id, {chosenTodo} )
       .then((res) => {
         console.log(res);
         navigate('/')

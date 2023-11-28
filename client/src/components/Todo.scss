@@ -1,4 +1,3 @@
-
 .todo-container {
     max-width: 70%;
     margin: auto;
@@ -17,13 +16,12 @@
     .todo-info-bubble {
         padding: 33px 30px;
         border-radius: 50%;
-        background-color: #ff5631;
         margin-left: 50px;
         height: 100px;
         width: 100px;
         p {
-            font-size: 26px;
-            color: #0d0d0d;
+            font-size: 40px;
+            color: #ff5631;
             font-weight: bold;
         }
     }
@@ -49,19 +47,18 @@
         transition: 0.5s;
     }
     button {
-        background-color: #ff5631;
-        color: #0d0d0d;
+        color: #ff5631;
+background-color: transparent;
         font-weight: bold;
         border: none;
-        font-size: 31px;
-        height: 50px;
-        padding-bottom: 5px;
-        margin-left: 30px;
-        width: 50px;
-        border-radius: 50%;
+        font-size: 50px;
+        margin-left: 10px;
+        padding: 0 20px;
+        transition: all .2s ease-in-out;
         &:hover {
             cursor: pointer;
-            background-color: #e66c50;
+            transform: scale(1.3);
+            color: #863405;
         }
         &:active {
             box-shadow: 0 0 2px darkslategray;
@@ -77,11 +74,14 @@
     border: 1px solid #dfceb140;
     justify-content: space-between;
     padding: 20px 35px;
+    transition: all .2s ease-in-out;
+
     background-color: #1e1e1e;
     margin: 10px 0;
     height: auto;
     width: 700px;
     border-radius: 10px;
+    
     .action {
         display: flex;
         align-items: center;
@@ -117,14 +117,18 @@
         max-width: 500px;
         line-break: anywhere;
     }
+    &:hover{
+        transform: scale(1.02);
+
+    }
 }
 
 @media only screen and (max-width: 1280px) {
-    .todo-container{
+    .todo-container {
         width: 100%;
     }
 
-    .todo-info{
+    .todo-info {
         margin: auto;
         margin-left: 60px;
     }
@@ -133,10 +137,8 @@
         padding: 50px 80px;
         display: flex;
         margin: auto;
-       
-        
     }
-    input{
+    input {
         font-size: 23px;
     }
 
@@ -183,7 +185,7 @@
         .todo-actions {
             display: flex;
             align-items: center;
-            
+
             h1 {
                 color: #dfceb1;
                 cursor: pointer;
@@ -195,4 +197,3 @@
         }
     }
 }
-
