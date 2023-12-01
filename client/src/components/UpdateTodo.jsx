@@ -16,7 +16,7 @@ const UpdateTodo = () => {
   const editTodo = (e) => {
     e.preventDefault();
     axios
-      .put(`${link}/editTodo/` + id, {chosenTodo} )
+      .put(`${link}/editTodo/` + id, {chosenTodo}, { withCredentials: true } )
       .then((res) => {
         console.log(res);
         navigate('/')
