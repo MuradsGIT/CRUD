@@ -11,7 +11,7 @@ const UpdateTodo = () => {
   const [chosenTodo, setChosenTodo] = useState("");
   const navigate = useNavigate();
 
-  const [link, setLink] = useState("http://localhost:3001")
+  const [link, setLink] = useState("https://backend-lhnz.onrender.com")
 
   const editTodo = (e) => {
     e.preventDefault();

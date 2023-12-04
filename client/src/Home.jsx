@@ -7,7 +7,7 @@ const Home = (e) => {
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-  const [link, setLink] = useState("http://localhost:3001");
+  const [link, setLink] = useState("https://backend-lhnz.onrender.com");
   const { getLoggedIn } = useContext(AuthContext);
   const [account, setAccount] = useState(true);
   

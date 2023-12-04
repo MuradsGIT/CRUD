@@ -14,7 +14,7 @@ const Todo = () => {
   const [todo, setTodo] = useState("");
   const [amountDone, setAmountDone] = useState(0);
   const [amount, setAmount] = useState(0);
-  const [link, setLink] = useState("http://localhost:3001");
+  const [link, setLink] = useState("https://backend-lhnz.onrender.com");
   const { getLoggedIn } = useContext(AuthContext);
 
   const handleStatus = async (e) => {

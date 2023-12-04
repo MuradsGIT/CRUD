@@ -7,14 +7,19 @@ const AuthContext = createContext();
 function AuthContextProvider(props) {
   const [loggedIn, setLoggedIn] = useState(false);
 
-  const [link, setLink] = useState("http://localhost:3001");
+  const [link, setLink] = useState("https://backend-lhnz.onrender.com");
   const getLoggedIn = async () => {
-    const loggedInRes = await axios.get(`${link}/api/user/loggedIn`, {
-      withCredentials: true,
-    });
-    console.log(loggedInRes)
-    setLoggedIn(loggedInRes.data);
+    try {
+      const loggedInRes = await axios.get(`${link}/api/user/loggedIn`, {withCredentials:true});
+      console.log(loggedInRes)
+      setLoggedIn(loggedInRes.data);
+    } catch (error) {
+      // Handle errors, log them, or update state accordingly
+      console.error('Error fetching loggedIn status:', error);
+      setLoggedIn(false); // Set to false in case of an error
+    }
   };
+  
 
   useEffect(() => {
     getLoggedIn();
